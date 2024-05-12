@@ -1,0 +1,24 @@
+.{
+    .name = "zig-life",
+    .version = "0.0.3",
+    .minimum_zig_version = "0.12.0",
+
+    .dependencies = .{
+        .@"conway-zig" = .{
+            .url = "https://github.com/sigidagi/conway-zig/archive/refs/tags/v0.0.2.tar.gz",
+            .hash = "1220c95ad70769a3828765c1760e25fd01c02a6d7340ba557d971a097bfe049d60b9",
+        },
+    },
+
+    .paths = .{
+        // This makes *all* files, recursively, included in this package. It is generally
+        // better to explicitly list the files and directories instead, to insure that
+        // fetching from tarballs, file system paths, and version control all result
+        // in the same contents hash.
+        "",
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "README.md",
+    },
+}
